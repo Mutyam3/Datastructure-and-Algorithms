@@ -1,0 +1,294 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> Arrays 
+        </title>
+    </head>
+
+    <body>
+        <pre>
+            <code>
+                *** Arrays  ***
+                   ------- 
+
+                 Array is a collection of items of the same variable type that are stored at contiguous memory locations.
+                 It is one of the most popular and simple datastructures used in programming. 
+
+            ==>   Basic Terminologies of Array :
+            
+               1. Array Index : In an array, elements are identified by their indexes. 
+                                Array index starts from 0. 
+
+               2. Array Element : Elements are items stored in an array and can be accessed by their index. 
+
+               3. Array Length : The Length of an array is determined by the number of elements it can contain. 
+
+            ==> Memory representation of Array : 
+
+                In an array, all the elements are stored in contiguous memory locations. 
+                So, if we initialize an array, the elements will be allocated sequentially in memory. 
+                This allows for efficient access and manipulation of elements. 
+
+                In Python, lists store references to objects, meaning each element in the list points to a memory location 
+                where the object is stored. 
+
+
+            ==> Declaration of Array :
+
+                Arrays can be declared in various ways in deifferent languages :
+
+                In python, all types of lists are created same way.
+
+                arr = []
+
+            ==> Initialization of Array :
+
+                Arrays can be initialized in different ways in different languages. 
+
+                In Python : 
+
+                # This list will store integer type elements
+                   
+                   arr = [1,2,3,4,5]
+
+                # This list will store character type elements (strings in Python) 
+
+                   arr = ['a', 'b', 'c', 'd', 'e']
+
+                # This list will store float type elements 
+
+                   arr = [1.4, 2.0, 24.0, 5.0,0.0] All float values 
+
+            ==>  Importance of array :
+
+                  int v1 = 10;
+                  int v2 = 20;
+                  int v3 = 30;
+                  int v4 = 40;
+                  int v5 = 50; 
+                   . 
+                   .                                       10 | 20 | 30  | 40 | 50
+                   . 
+             Multiple variables to store each value   ==>  Single Array to store all values 
+
+            ==> Types of Arrays : 
+                
+                      Arrays can be classified into two ways : 
+
+                     => on the basis of size 
+                     => on the basis of Dimensions 
+
+                ==> Types of Arrays On the basis of Size :
+
+                1. Fixed Sized Arrays 
+                2. Dynamic Size Arrays 
+
+                1. Fixed Sized Arrays : 
+
+                       We cannot alter or update the size of this array. Here only a fixed size (i.e te size that is mentioned in square brackets[])
+                       of memory will be allocated for storage. 
+                       In Case, we don't know the size of the array then if we declare a larger size and store a lesser number of elements 
+                       will result in a wastage of memory or we declare a lesser size than the number of elements then we 
+                       won't get enough memory to store all the elements. In such cases, static memory is not preferred. 
+
+                     In python : 
+
+                        # create a fixed-size list of length 5, 
+                        # initialized with zeros 
+
+                        arr = [0] * 5
+
+                        # Output the fixed-size list
+                        print(arr) 
+
+                2. Dynamic Sized Arrays : 
+
+                       The size of the array changes as per user requirements during execution of code so the coders donot have to worry about sizes.
+                       They can add and removed the elements as per the need. The memory is mostly dynamically allocated and d-allocated in these arrays.
+
+                       #Dynamic Array : 
+                       arr = []
+
+            ==> Types of Arrays on the basis of Dimensions : 
+
+                 1. One-dimensional Array(1-D Array) : You can imagine a 1d array as a row, where elements are stored one after another. 
+
+                           One -dimensional Array (1-D Array) 
+
+                            index  ==>  0 1  2  3  4  5
+                           Element ==>  5 10 20 25 30 35
+
+                 2. Multi-Dimensional Array : A Multi-dimensional array is an array with more than one dimension.
+                                            We can use multidimensional array to store complex data in the form of tables.etc.,
+                                            We can have 2-D arrays, 3-D arrays, 4-D arrays and so on. 
+
+
+                           => Two-Dimensional Array(2-D Array or Matrix) : 2-D Multidimensional arrays can be considered as an array of arrays or as a Matrix consisting of rows and columns. 
+
+                           => Three-Dimensional Array(3-D Array) : A 3-D Multidimensional array contains three dimensions, so it can be considered an 
+                                                                    array of two-dimensional arrays. 
+
+
+                        
+            ==>  Operations on Array : 
+
+                    1. Array Traversal : Array Traversal refers to the process of accessing and processing each element of an array sequentially. 
+                                         This is one of the most fundamental operations in programming, as arrays are widely used data structures for 
+                                         storing multiple elements in a single variable. 
+
+                        How Array Traversal Works ? 
+
+                           When an array is created, it occupies a contiguous block of memory where elements are stored in an indexed manner. 
+                           Each element can be accessed using its index, which starts from 0 in most programming languages.
+                           
+                           For Example, consider an array containing five integers : 
+
+                                            arr = [10,20,30,40,50]
+
+                                here : The first element (10) is at index 0.
+                                       The second element (20) is at index 1 
+                                       The last element (50) is at index 4 
+
+                            Array Traversal means accessing each element from start to end (or sometimes in reverse order), usually by using a loop. 
+
+                        Types of Array Traversal : 
+
+                        Array traversal can be done in multiple ways based on the requirement : 
+
+                        1. Sequential(linear) Traversal :
+                             
+                                => This is the most common way of traversing an array.
+                                => It involves iterating through the array one element at a time from the first index to the last.
+                                => Used for printing elements, searching or performing calculations(such as sum or average).
+
+                        2. Reverse Traversal : 
+
+                                => Instead of starting index 0, the traversal begins from the last element and moves towards the first. 
+                                => This is useful in cases where we need to process elements from the end. 
+                                
+                   2. Insertion in Array : 
+
+                        Insertion in array refers to the process of adding a new element at a specific position while maintaining the order of the existing elements 
+                        Since arrays have a fixed size in static implementations, inserting an element often requires shifting existing elements to make space. 
+
+                        How Insertion Works in an Array ? 
+
+                        Arrays are stored in contiguous memory locations, meaning elements are arranged in a sequential block. 
+                        When inserting a new element, the following happens : 
+
+                        1. Identify the Position : Determine where the new element should be inserted. 
+                        2. Shift Elements :  Move the existing elements one position forward to create space for the new element. 
+                        3. Insert the New Element : Place the new value in the correct position 
+                        4. Update the Size(if Applicable) : If the array is dynamic, its size is increased. 
+
+                         Example : if we have the array : 
+                                        
+                                           arr = [10,20,30,40,50]
+
+                         and we want to insert 25 at index 2, the new array will be : 
+
+                                          arr = [10,20,25,30,40,50]
+
+                         here, elements 30,40,50 have shifted right to make space 
+
+                        Types of Insertion : 
+
+                        1. Insertion at the Beginning (Index 0) : 
+                            => Every elements must shift one position right 
+                            => This is thr least efficient case for large arrays as it affects all elements. 
+
+                        2. Insertion at a Specific Index : 
+                            => Elements after the index shift right. 
+                            => If the index is in the middle, half of the array moves 
+
+                        3. Insertion at the End : 
+                            => The simplest case since no shifting is required
+                            => Used in dynamic arrays where size increases automatically (eg.python lists). 
+
+                   3. Deletion in Array : 
+
+                          Deletion in an Array refers to the process of removing an element from a specific position while 
+                          maintainingthe order of the remaining elements.
+                          Unlike linked lists, where deletion is efficient, removing an element from an array requires shifting elements to fill the gap. 
+                          
+                          How Deletion works in an Array ? 
+
+                          Since arrays have contiguous memory allocation, deleting an element doesnot reduce the allocated memory size. 
+                          Instead, it involves : 
+
+                          1. Identify the Position : Find the index of the element to be deleted. 
+                          2. shift Elements :  Move the elements after the deleted element one position to the left.
+                          3. Uodate the Size (if applicable) : If using a dynamic array, the size might reduced. 
+
+                          Example, consider the array : 
+                                           arr = [10,20,30,40,50]
+                                    if we delete the element 30 (index 2), the new array will be : 
+                                            arr = [10,20,40,50]
+
+                            here, elements 40 and 50 shifted left to fill the gap. 
+
+                        Types of Deletion : 
+                           
+                           1. Deletion at the Beginning (Index 0) 
+                                => Every Element shifts left by one position. 
+                                => This is the most expensive case as it affects all elements. 
+
+                           2. Deletion at a specific Index 
+                                => Only elements after the index shift left 
+                                => If the index is in the middle, half of the array moves. 
+                                
+                           3. Deletion at the End 
+                                => The simplest case since no shifting is required. 
+                                => The size of the array is reduced (in dynamic arrays). 
+
+                    4. Searching in Array : 
+
+                            Searching in an array refers to the process of finding a specific element in a given list of elements 
+                            The goal is to determine whether the element exists in the array and, if so, find its index(position).
+
+                            Searching is a fundamental operation in programming, as it is used in data retrieval,filtering and processing.
+
+                            Types of Searching in an Array : 
+
+                            There are two main types of searching techniques in an array : 
+
+                            1. Linear Search (Sequential Search) :
+
+                                => This is the simplest search algorithm 
+                                => It traverses the array one element at a time and compares each element with the target value 
+                                => If a match is found, the search continues until the end  of the array. 
+
+                                Example : consider an array : 
+
+                                              arr = [10,20,30,40,50]
+
+                                If we search for 30, the algorithm will :
+
+                                1. Compare 10 with 30 => No Match 
+                                2. Compare 20 with 30 => No Match 
+                                3. Compare 30 with 30 => Match found at index 2. 
+
+                            2. Binay Search (Efficient Search for sorted Array)
+
+                               => Works only on sorted arrays(in increasing or decreasing order)
+                               => Uses a divide and conquer approach 
+                               => It repeatedly divides the search space in half until the target element is found. 
+
+                               How Binary Search Works ? 
+                               1. Find the middle element of the array 
+                               2. If the target is equal to the middle element, return its index 
+                               3. If the target is less than middle element, search the left half 
+                               4. If the target is greater than the middle element, search the right half 
+                               5. Repeat until the element is found or the search space is empty. 
+
+                                consider a sorted array : 
+                                          arr = [10,20,30,40,50]
+                                if we search for 30 : 
+                                   Middle element = 30 => Match found! 
+                                   The search ends in just one step, making it much faster than linear Search. 
+
+
+            </code>
+        </pre>
+    </body>
+</html>
