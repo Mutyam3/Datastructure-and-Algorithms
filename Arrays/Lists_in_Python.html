@@ -1,0 +1,200 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> Lists in Python 
+        </title>
+    </head>
+    <body>
+        <pre>
+            <code>
+            ****    Lists In Python :  ****  
+                    --------------- 
+
+            
+             In Python, a list is a built-in data structure that can hold an ordered collection of items. 
+             Unlike arrays in some languages, Python lists are very flexible :
+
+             => can contain duplicate items 
+             => Mutable : items can modified, replaced or removed 
+             => Ordered : elements maintain the order in which they were added. 
+             => Index-based : items are accessed using their position (starting from 0)
+             => Can store mixed data types (integers, strings, booleans, even other lists)
+
+          ==>   Creating a List : 
+
+              Lists can be created in several ways, such as using square brackets, the list() constructor or by repeating elements. 
+              
+              1. Using Square Brackets :
+
+                        We use square brackets [] to create a list directly.
+
+                        Example : Creating lists with integers, strings and mixed data types. 
+
+                                a = [1,2,3,4,5] # List of Integers 
+                                b = ['apple', 'banana', 'cherry'] # List of strings 
+                                c = [1, 'hello', 3.14, True] # Mixed data types 
+                                print(a)
+                                print(b)
+                                print(c)
+
+
+              2. Using list() constructor : 
+
+                         we can also create a list by passing an iterable(like a tuple , string or another list) to the list() function 
+
+                         Example: Creating a list from tuple and string 
+
+                                a = list((1,2,3,'apple', 4.5))
+                                print(a) // [1,2,3,'apple',4.5]
+
+                                b = list('Mutyam')
+                                print(b) // ['M', 'u', 't', 'y', 'a', 'm']
+
+              3. Creating List with Repeated Elements : 
+
+                         we can use the muliplication operator * to create a list with repeated items. 
+
+                         Example : Creating lists with repeated values.
+
+                         a = [2] * 5 
+                         b = [0] * 6 
+                         print(a) // [2,2,2,2,2]
+                         print(b) // [0,0,0,0,0,0]
+
+          ==> Accessing List Elements : 
+
+                 Elements in a list are accessed using indexing. Pythom indexes start at 0, 
+                 so a[0] gives the first element. Negative indexes allow access from the end (e.g., -1 gives the last element)
+
+                     Example : Accessing first, last and slicing elements : 
+
+                     a = [10,20,30,40,50]
+
+                     print(a[0]) // 10
+                     print(a[-1]) // 50
+                     print(a[1:4]) # Elements from index 1 to 3 // [20,30,40] 
+
+          ==> Adding Elements into List : 
+
+                 We can add elements to a list using the following methods:
+
+                 => append() : Adds an element at the end of the list 
+                 => extend() : Adds multiple elements to the end of the list 
+                 => insert() : Adds an element at a specific position 
+                 => clear()  : removes all items 
+
+                 Example : 
+
+                 a = []
+
+                 a.append(10) // [10]
+
+                 a.insert(0,5) // [5,10]
+
+                 a.extend([15,20,25]) // [5,10,15,20,25]
+
+                 a.clear() // [] 
+
+          ==> Updating Elements into List : 
+
+                  Since Lists are mutable, we can update elements by accessing them via their index. 
+
+                  Example : Updating the second Element 
+
+                  a = [10,20,30,40,50]
+                  a[1] = 25 
+                  print(a) // [10,25,20,30,40,50]
+
+          ==> Removing Elements from list : 
+
+                  We can remove elements from a list using :
+
+                => remove() : Removes the first occurrence of an element 
+                => pop() : Removes the element at a specific index or the last element if no index is specified
+                => del statement : Deletes an element at a specific index 
+
+                Example : 
+
+                    a = [10,20,30,40,50]
+
+                    a.remove(30)
+                    print(a) // [10,20,40,50]
+
+                    b = a.pop(1)
+                    print(b) // 20 
+                    print(a) //[10,40,50]
+
+                    del a[0] 
+                    print(a) // [40,50]
+
+          ==> Iterating Over lists : 
+
+                 We can iterate over lists using loops, which is useful for performing actions on each item 
+
+                 Example : Iterating with a for loop 
+
+                 a = ['apple', 'banana', 'cherry']
+
+                 for item in a: 
+                      print(item) 
+
+                Output : 
+                apple 
+                banana 
+                cherry 
+
+          ==> Nested Lists : 
+          
+                  A nested list is a list within another list, which is useful for representing matrices or tables 
+                  We can access nested elements by chaining indexes. 
+
+                  Example : Accessing elements of a nested list (2D list). 
+
+                          matrix = [ [1,2,3],
+                                     [4,5,6],
+                                     [7,8,9]
+                                    ]
+                         print(matrix[1][2]) //6 
+
+
+          ==> List Comprehension : 
+
+                 List Comprehension is a concise way to create lists using a single line of code. 
+                 It is useful for applying an operation or filter to items in an iterable, such as a list or range. 
+
+                 Example : Creating a list of squares using list comprehension 
+
+                     squares = [x**2 for x in range(1,6)]
+                     print(squares) // [1,4,9,16,25] 
+
+                 
+          ==> How Python Stores List Elements?
+
+                   In Python, a list doesn’t store actual values directly. Instead, it stores references (pointers) to objects in memory. 
+                   This means numbers, strings and booleans are separate objects in memory and the list just keeps their addresses.
+
+                   That’s why modifying a mutable element (like another list or dictionary) can change the original object,
+                    while immutables remain unaffected.
+
+                          a = [10, 20, "GfG", 40, True]
+                          print(a)        
+                          print(a[0])     
+                          print(a[1])  
+                          print(a[2])
+
+                    Output
+                       [10, 20, 'GfG', 40, True]
+                        10
+                        20
+                        GfG
+                    Explanation:
+
+                        The list a contains an integer (10, 20 and 40), a string ("GfG") and a boolean (True).
+                        Elements are accessed using indexing (a[0], a[1], etc.).
+                        Each element keeps its original type.
+
+
+            </code>
+        </pre>
+    </body>
+</html>
